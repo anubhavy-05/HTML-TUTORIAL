@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <table>
+                <caption>student data</caption>
+                <tr>
+                    <th>name</th>
+                    <th>roll no.</th>
+                </tr>
+                <tr>
+                    <td>Anubhav</td>
+                    <td>1230432162</td>
+                </tr>
+                <tr>
+                    <td>Abhit</td>
+                    <td>1230432163</td> 
+                    </tr>
+                    <tr>
+                    
+                 <td>Atul</td>
+                    <td>12304321654</td>
+            </tr>
+                </tr>
+                </table>
+            <!-- agr cloumn ko hm koe name dena chahe to ham "colspan" ka use karenge ,lets see -->
+             <table>
+            <thead>
+                <tr>
+                    <th colspan="2">
+                    INFORMATION
+                </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Anubhav</td>
+                    <td>1230432162</td>
+                    </tr>
+                <tr>
+                    <td>Abhit</td>
+                    <td>1230432163</td> 
+                    </tr>
+                    <tr>
+                    <td>Atul</td>
+                    <td>12304321654</td>
+            </tr>
+                </tr>
+            </table>
+            </tbody>
+           <!-- note 1: now lets study about foarms in html:-> It is used to collect data 
+           note 2:action in form ,<form action ="/action.php">:-> action attribute is used to define what action need to be performed when a form is submitted 
+           -> It also used to check that the informatio requirexd during signing,login ,and many more like you fill the phone number in that section or in other  -->
+           <br>
+           <form action ="/action.php">
+           <input type="text" placeholder="type something here">
+           </form>
+           <br>
+<h4>Ragistration form </h34><br><br>
+
+<form action ="/action.php">
+            <input type="text" 
+            placeholder="username">
+            <br>
+            
+            <input type="password" placeholder="password">
+            <br>
+        </form>  
+        <h5>select your class</h>
+        <br><br>
+        <input type="radio"value="class XI" name="class">class XI 
+        <br>
+        <input type="radio"value="class XII" name="class">class XII 
+        <br>
+        <!-- Jab ham normally esse use karte hai to to class ko tick karne ke liye bullet par click karna padta hai,but jab hm label ka use kaer dete hai to ham text par bhi click karennge to selected classor radio button tick ho jayega ie; -->
+<label for="144">
+     <input type="radio"value="class XI" name="class" id="144">class XI 
+     
+</label>
+<br>
+<label for="162">
+
+        <input type="radio"value="class XII" name="class" id="162">class XII 
+        </label>
+        <br>
+        <h4>subject</h4>
+
+        <label for="math">
+            <input type="checkbox" value="math"name="subject"id="144"> math
+        </label>
+        <br>
+    <label for="phy">
+    
+            <input type="checkbox" value="phy"name="subject"id="145">phy
+        </label>
+        <br>
+   
+<label for="chem">
+            <input type="checkbox" value="chem"name="subject"id="146">chem
+        </label>
+        <br>
+        <label for="bio">
+            <input type="checkbox" value="bio"name="subject"id="147">bio
+        </label> <br><br>
+        <textarea name="feedback" id="104" placeholder="give your valuable feedback">
+
+        </textarea>
+        <br><br>
+    
+    SELECT YOUR CITY
+    <br>
+    <select name="CITY">
+        <option value="delhi">delhi</option>
+        <option value="mumbai">mumbai</option>
+        <option value="lucknow">lucknow</option>
+        <option value="banglore">banglore</option>
+    </select><br><br>
+    <input type="submit" value="submit"><br><br>
+   
+</body>
+</html>
