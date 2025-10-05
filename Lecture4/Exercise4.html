@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Traffic Signal</title>
+  <style>
+    body {
+      background: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .traffic-light {
+      width: 100px;
+      background: #333;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #000;
+    }
+
+    .light {
+      width: 60px;
+      height: 60px;
+      margin: 15px auto;
+      border-radius: 50%;
+      background: #111;
+      transition: background 0.5s;
+    }
+
+    .red.on {
+      background: red;
+    }
+
+    .yellow.on {
+      background: yellow;
+    }
+
+    .green.on {
+      background: green;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="traffic-light">
+    <div class="light red" id="red"></div>
+    <div class="light yellow" id="yellow"></div>
+    <div class="light green" id="green"></div>
+  </div>
+
+  <script>
+    let lights = ["red", "yellow", "green"];
+    let index = 0;
+
+    function changeLight() {
+      lights.forEach(light => {
+        document.getElementById(light).classList.remove("on");
+      });
+
+      document.getElementById(lights[index]).classList.add("on");
+      index = (index + 1) % lights.length;
+    }
+
+    setInterval(changeLight, 2000); // change light every 2 seconds
+    changeLight(); // initial light
+  </script>
+
+</body>
+</html>
