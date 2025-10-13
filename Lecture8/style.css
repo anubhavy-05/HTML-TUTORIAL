@@ -1,0 +1,20 @@
+div {
+    height: 100px;
+    width: 100px;
+    background-color: antiquewhite;
+    border: 2px solid  black;
+}
+
+
+div:hover{
+    background-color: red;
+    color: white;
+    /* this is used as transition which provide the way to control the animation speed a css property change its value instead of imediate change like when i hover the cursor on the box then the background_color of box will change into given color like red abd text color into white  */
+
+}
+div:active{ 
+    /* active is pseudo class and after using this when we hovor cursor on box then background color is red and when we long press it color is green 
+    NOTE:CSS :active Pseudo-class
+The :active pseudo-class is most used on <a> and <button> elements. A link becomes activated when the user clicks on it, the same goes for a button.*/
+    background-color:green;
+}
