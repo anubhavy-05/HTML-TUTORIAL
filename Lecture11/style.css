@@ -1,0 +1,287 @@
+/* General Body and Font Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0e8f0;
+    padding: 20px; /* Add some padding for smaller screens */
+    box-sizing: border-box;
+}
+
+/* Main Container for the Advertisement */
+.promo-container {
+    position: relative;
+    width: 100%;
+    max-width: 950px;
+    background: linear-gradient(100deg, #f3e9f3, #e8dbe8);
+    display: flex;
+    align-items: center;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Left and Right Columns for Layout */
+.left-column, .right-column {
+    flex: 1;
+    z-index: 2; /* Ensure content is above the wave */
+}
+
+.left-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: contain;
+    filter: drop-shadow(10px 10px 15px rgba(0,0,0,0.15));
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Headings and Tagline */
+.headings h1 {
+    font-size: 2.3rem;
+    color: #6a1a5d;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.headings p {
+    font-size: 1.2rem;
+    color: #8c4c82;
+    margin: 5px 0 25px 0;
+}
+
+/* Credit Card and Offer Bubble Container */
+.card-and-offer {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 30px;
+}
+
+.card-img {
+    width: 280px;
+    border-radius: 15px;
+}
+
+/* Speech Bubble for the Offer */
+.offer-bubble {
+    position: absolute;
+    top: -45px;
+    right: -100px;
+    background-color: white;
+    border: 2.5px solid #8c267c;
+    border-radius: 15px;
+    padding: 10px 15px;
+    text-align: center;
+    width: 170px;
+    transform: rotate(10deg);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Added for smooth transitions */
+}
+
+/* Triangle/Tail for the speech bubble */
+.offer-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -16px;
+    left: 25px;
+    width: 0;
+    height: 0;
+    border: 16px solid transparent;
+    border-top-color: #8c267c;
+    transform: rotate(-25deg);
+    z-index: -1;
+}
+
+.offer-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -11px;
+    left: 27px;
+    width: 0;
+    height: 0;
+    border: 13px solid transparent;
+    border-top-color: white;
+    transform: rotate(-25deg);
+}
+
+.offer-bubble .main-offer {
+    display: block;
+    background-color: #8c267c;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 5px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.offer-bubble .sub-offer {
+    display: block;
+    color: #333;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.offer-bubble .partner {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.offer-bubble .partner small {
+    font-size: 0.6rem;
+    display: block;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* 'Apply Now' Button */
+.apply-btn {
+    background-color: #8c267c;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+}
+
+.apply-btn:hover {
+    background-color: #6a1a5d;
+}
+
+/* Footer Section with Wave and Logo */
+.footer-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    pointer-events: none; /* Allow clicks to pass through */
+    z-index: 1;
+}
+
+.wave-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wave-svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: #8c267c;
+}
+
+.axis-logo {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    height: 35px;
+    pointer-events: all; /* Make logo clickable if needed */
+}
+
+.tnc {
+    position: absolute;
+    bottom: 5px;
+    left: 40px;
+    color: #666;
+    font-size: 0.8rem;
+    z-index: 3;
+    pointer-events: all;
+}
+
+/* --- REVISED RESPONSIVE DESIGN SECTION --- */
+/* This single media query handles tablets and mobile devices */
+@media (max-width: 920px) {
+    .promo-container {
+        flex-direction: column;
+        padding: 30px 20px 20px 20px; /* Adjust padding for stacked layout */
+        height: auto;
+        text-align: center;
+    }
+
+    .left-column {
+        /* Hide the phone image on smaller screens to save space */
+        display: none; 
+    }
+
+    .right-column {
+        /* Center all items in the column now that it's stacked */
+        align-items: center; 
+    }
+
+    .headings h1 {
+        font-size: 2rem; /* Slightly adjust font size */
+    }
+    .headings p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    .card-img {
+        width: 250px; /* Adjust card size */
+    }
+    
+    .card-and-offer {
+        margin-bottom: 35px;
+        /* We make the container a flexbox to easily manage the items inside */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Reposition the offer bubble for the mobile layout */
+    .offer-bubble {
+        position: static; /* This is the key fix: make it part of the normal document flow */
+        transform: rotate(0); /* Remove the tilt */
+        margin: 25px auto 0 auto; /* Add space above it */
+        width: 220px; /* Give it a bit more width */
+    }
+
+    /* Hide the speech bubble's tail since it's no longer pointing at the card */
+    .offer-bubble::after, .offer-bubble::before {
+        display: none; 
+    }
+
+    .footer-section {
+        height: 80px;
+    }
+    .axis-logo {
+        height: 30px;
+        right: 20px;
+        bottom: 15px;
+    }
+    .tnc {
+        left: 20px;
+        bottom: 10px;
+        /* Change text color to be visible on the dark purple wave */
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
