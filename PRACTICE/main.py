@@ -10,4 +10,11 @@ print(type(name))
 print(type(age))
 print(type(price))
 
+# Now let's perform some arithmetic operations
+
+a=10
+b=20    
+sum=a+b
+print("The sum of a and b is", sum)
+print(type(sum))
 
