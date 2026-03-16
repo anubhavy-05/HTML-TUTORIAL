@@ -17,4 +17,13 @@ b=20
 sum=a+b
 print("The sum of a and b is", sum)
 print(type(sum))
-
+difference=a-b
+print("The difference of a and b is", difference)
+print(type(difference))
+product=a*b
+print("The product of a and b is", product)     
+print(type(product))
+quotient=a/b
+print("The quotient of a and b is", quotient)   
+print(type(quotient))
+    
